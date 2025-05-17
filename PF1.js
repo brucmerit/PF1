@@ -19,20 +19,25 @@
         fetch(`https://api.api-ninjas.com/v1/holidays?major_holiday=&country=${countryValue}`, requestOptions)
         .then((response) => response.json())
         .then((result) => {
-         //loop through holiday
-         let holidayContent = "";
-        //cycle through the result
-        //get the information that i want to display on the app
-        for(let holidayCount = 0; holidayCount < result.length; holidayCount++ ){
-        holidayContent += `
-            <div>
-                <h2>${result[holidayCount].date}<span>(${result[holidayCount].day})</h2>
-                <h3>${result[holidayCount].name}</h3>
-             </div>
-               `;
-           }
-           holidayApp.innerHTML = holidayContent;
-           //holidayText.innerHTML = result[0].name;
+  let holidayContent = "";
+
+  // Sort by date in ascending order
+  result.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  // Loop through each holiday
+  for (let holiday of result) {
+    const isLongWeekend = holiday.day === "Friday" || holiday.day === "Monday";
+
+    holidayContent += `
+      <div>
+        <h2>${holiday.date} <span>(${holiday.day})</span></h2>
+        <h3>${holiday.name}</h3>
+        ${isLongWeekend ? "<p><strong>It's a long weekend!</strong></p>" : ""}
+      </div>
+    `;
+  }
+
+  holidayApp.innerHTML = holidayContent;
          })
          .catch((error) => console.error(error));
      });
