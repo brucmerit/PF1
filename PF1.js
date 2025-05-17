@@ -16,7 +16,7 @@
             //get value input field ("countryName")
             const countryValue = countryName.value;
             
-        fetch(`https://api.api-ninjas.com/v1/holidays?major_holiday=&country=${countryValue}`, requestOptions)
+        fetch(`https://api.api-ninjas.com/v1/holidays?public_holiday=&country=${countryValue}`, requestOptions)
         .then((response) => response.json())
         .then((result) => {
   let holidayContent = "";
