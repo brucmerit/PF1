@@ -36,7 +36,7 @@
       <div>
         <h2>${holiday.date} <span>(${holiday.day})</span></h2>
         <h3>${holiday.name}</h3>
-        ${isLongWeekend ? "<p><strong>It's a long weekend!</strong></p>" : ""}
+        ${isLongWeekend ? `<p><span class="long-weekend">It's a long weekend!</span></p>` : ""}
       </div>
     `;
   }
