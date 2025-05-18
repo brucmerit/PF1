@@ -1,25 +1,49 @@
+
 body {
       font-family: Arial, sans-serif;
       padding: 20px;
       max-width: 800px;
       margin: auto;
-      background-color: #fec260; 
+      background-color: #fec260; /* main background colour */
       color: #333;
+    }
+
+    h1, h2 {
+      text-align: center; /* alignment to centre */
     }
 
     #countryName {
     width: 300px; /* longer text box */
     }
+
     input, button {
       padding: 10px;
       font-size: 16px;
       margin-right: 10px;
+      border-radius: 4px 4px 4px 4px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
+    #imageContainer {
+      display: flex;
+      flex-wrap: wrap; /* make my web display looks cleaner*/
+      justify-content: center; 
+      gap: 10px;
+      margin: 20px 0;
+    }
+    
     #imageContainer img {
       width: 200px;
       margin: 10px;
       border-radius: 8px;
+    }
+
+    #holidayApp {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center all result boxes */
     }
 
     #holidayApp div {
@@ -28,6 +52,9 @@ body {
       border: 1px solid #ddd;
       border-radius: 6px;
       background-color: #fff3e0;
+      text-align: center; /* align my results */
+      width: 60%; /* Make result boxes smaller */
+
     }
 
     .long-weekend {
@@ -36,4 +63,5 @@ body {
   padding: 4px 10px;
   border-radius: 4px;
   font-weight: bold;
+  
   }
