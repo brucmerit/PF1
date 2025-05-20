@@ -4,7 +4,7 @@
       padding: 20px;
       max-width: 800px;
       margin: auto;
-      background-color: #fec260; /* main background colour */
+      background-color: #faf2e0; /* main background colour */
       color: #333;
     }
 
@@ -32,6 +32,7 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
+      border: none; /* Removes the border entirely */
     }
 
     button {
@@ -42,7 +43,8 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      background-color: #8dedf1; /* main background colour */
+      background-color: #e4d017; /* main background colour */
+      border: none; /* Removes the border entirely */
     }
 
     #imageContainer {
