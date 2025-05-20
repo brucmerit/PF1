@@ -54,11 +54,15 @@
     })
       .then((response) => response.json())
       .then((data) => {
+
+      imageContainer.innerHTML = "";
+
         if (data.photos && data.photos.length > 0) {
           data.photos.forEach((photo) => {
             const img = document.createElement("img");
             img.src = photo.src.medium;
             imageContainer.appendChild(img);
+
           });
         } else {
           imageContainer.innerHTML = "<p>No images found for this country.</p>";
