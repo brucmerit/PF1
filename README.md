@@ -80,6 +80,11 @@ The image section automatically refreshes with each new country search to avoid 
 Applying For..Loop
  - to enhance the user experience by identifying and highlighting the long weekends to our users.
 
+ Documentation
+ - proper housekeeping of project
+ - commit and push
+ - readme file
+
 # Resources 
 
 This project utilizes a range of tools and libraries to deliver its functionality and user experience. Below are the key resources:
